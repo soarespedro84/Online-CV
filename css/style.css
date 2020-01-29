@@ -1,0 +1,611 @@
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/imagens/tipoficeberg.jpg');
+  min-height: 100%;
+  font: 1.15em 'Poppins', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  font-size: 100%;
+  text-align: justify;
+}
+
+#upBtn {
+  display: none; 
+  position: fixed;
+  bottom:15px; 
+  right: 5px; 
+  z-index: 99; 
+  color: rgb(197, 197, 197); 
+  cursor: pointer; 
+  padding: 15px;
+}
+#upBtn img{
+  height: 70px;
+  width: auto;
+}
+
+#upBtn:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+
+.scrollBtn {
+  margin-top: 1em;
+  display: block;
+  position: relative; 
+  float: right;
+  width: 50%;
+  right: 1em; 
+  color: rgb(197, 197, 197); 
+  cursor: pointer; 
+  padding: 15px; 
+  
+}
+.scrollBtn:hover{
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.scrollBtn img{
+  height: 70px;
+  width: auto;
+}
+
+
+/*nav*/
+nav{
+  height: 6em;
+  line-height: 3em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 600;
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  /*Prevent jumping wrong place in Chrome & Safari*/
+  -webkit-transform: translateZ(0);
+  
+}
+
+/*menu button*/
+
+.bar1, .bar2, .bar3 {
+  width: 80%;
+  height: 14px;
+  background-color:rgb(197, 197, 197);
+  margin: 10px 0;
+  transition: 0.4s;
+  border-radius: 1em;
+}
+
+
+a#menu{
+  float: right;
+  width: 100px;
+  margin: 1.3em;
+  font-weight: 300; 
+}
+a#menu:hover{
+transform: scale(1.10);
+transition-duration: 0.5s;
+}
+
+/*navlist*/
+
+nav.nav_closed{
+  overflow: hidden;
+  transition: 0.8s;
+  
+}
+nav.nav_closed ul#navlist{
+  display: visible;
+  transition: 1s;
+}
+nav.nav_open {
+  background: rgba(0, 0, 0, 0.904);
+  transition: 0.8s;  
+  height: 100vh;
+}
+nav.nav_open ul#navlist {
+  display: block;
+  overflow: auto;
+  transition: 0.8s;
+}
+
+ul#navlist{
+  clear: right;
+  list-style: none;
+  font-weight: 500;
+  font-size: 2em;
+  line-height:2em;
+}
+
+nav ul#navlist li a {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  color: rgb(197, 197, 197);
+  text-decoration: none;
+  
+  
+}
+nav ul#navlist li a:hover{ 
+  color:rgb(98, 172, 182);
+  text-decoration: none;
+  font-size: 130%;
+  transition-duration: 0.5s;
+}
+
+
+/*section*/
+
+section#page-header{
+  height: 100vh;
+  width: 100%;
+  color: rgb(214, 214, 214);  
+  display: table;
+}
+section#page-header header{
+  width: 100%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+section#page-header footer {
+  width: 100%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: bottom;
+  margin-right: 100px;
+}
+section#page-header header h1 {
+font-size: 6em;
+font-weight: 800;
+line-height: 1em;
+}
+section#page-header header h2 {
+  font-size: 3em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+section.container {
+  height: auto;
+  width: 98%;
+  text-align: justify;
+  background: #06383f00; 
+  font: 1em, "Roboto", sans-serif;
+  color: rgb(255,255,255);
+  margin: 15em auto ;
+  overflow: hidden;
+  clear: both;
+}
+section.container header h1{
+  font: 2.5em 'Poppins', sans-serif;
+  line-height: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.5em;
+}
+section.container header h2{
+  font: 1.35em 'Poppins', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom-style: outset;
+  border-bottom-color: #76e6face;
+  border-bottom-width: 2px;
+  padding-bottom: 0.5em;
+}
+
+section.container article {
+  margin-left: auto;
+}
+
+section#profile {
+  width: 98%;
+
+}
+section#profile div{
+  margin-top: 0; 
+}
+
+section #textPresentation p{
+  float: left;
+  width: 45%;
+  margin: 0.5em 5% ;
+  text-align: justify;
+  vertical-align: middle;
+  font-size: 18pt;
+ 
+}
+section #imgPresentation img{
+  max-width: 45%;
+  width: 25%;
+  height: auto;
+  margin: 0.5em 5%;
+  border-radius: 15%;
+}
+
+
+/*HARD SKILLS*/
+
+section.container .pie{
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  margin: 1em auto ;
+}
+
+section .box{
+  width: 25%;
+  float: left;
+  margin: 0.5em auto ;
+  
+}
+.chart{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto ;
+  font-size: 16px;
+  text-align: center;
+  line-height: 150px  ;
+  
+}
+.chart:hover{
+  transform: scale(1.1);
+
+}
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*Progress*/
+
+#myProgress {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border: 1px solid #b0b0b0;
+  margin: 1em auto;
+  -webkit-box-shadow: inset 0 3px 5px 0 #d3d0d0;
+  -moz-box-shadow: inset 0 3px 5px 0 #d3d0d0;
+  box-shadow: inset 0 3px 5px 0 #d3d0d0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  float: left;
+}
+/*progress bar SoftSkills*/
+section#softskills.container div article{
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  margin: 1em auto ;
+}
+
+.myBarSoftSkills {
+  position: absolute;
+  line-height: 50px;
+  width: 1%;
+  height: 50px;
+  background-color: #17d3e6;
+  color: rgb(114, 114, 114);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+  font-size: 150%;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid #4cafc0;
+  -webkit-background-size: 45px 45px;
+  -moz-background-size: 45px 45px;
+  -o-background-size: 45px 45px;
+  background-size: 45px 45px;
+}
+
+/*progress Bar Lang*/
+
+
+section#languageskills.container div article{
+  width: 100%;
+  height: 450px;
+  text-align: center;
+  align-content: center;
+  margin: 1em auto ;
+}
+.myBarLang {
+  position: absolute;
+  line-height: 50px;
+  width: 1%;
+  height: 50px;
+  background-color: #17d3e6;
+  color: rgb(114, 114, 114);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.6);
+  font-size: 150%;
+  font-weight: bold;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid #4cafc0;
+   -webkit-background-size: 45px 45px;
+  -moz-background-size: 45px 45px;
+  -o-background-size: 45px 45px;
+  background-size: 45px 45px;
+}
+
+
+/*Experience and Education*/
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.753);  
+  transition: 0.5s;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-image: url(/imagens/tipoficeberg.jpg);
+  background-size: cover;
+  background-position: right;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 2px solid #888;
+  width: 60%; 
+  border-radius: 1em;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  
+}
+
+section.container h3 {
+  font: 1em 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 16pt;
+  text-align: center;
+  margin-top: 2em;
+  overflow: hidden;
+}
+section.container h2 {
+  font: 1em 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20pt;
+  text-align: center;
+  margin-top: 2em;
+  overflow: hidden;
+}
+section.container h4,p {
+  font: 1em 'Poppins', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+section.container .logo img{
+  height: 125px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 0.5em;
+  background: rgb(255, 255, 255); 
+  overflow: hidden;
+  
+}
+section.container div .logo{
+  width: 50%;
+  float: left;
+  margin: 0.5em auto;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+section#experience.container div .logo{
+  width: 33%;
+  height: auto;
+  float: left;
+  margin: 0.5em auto;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+
+/*Portfolio*/
+section#portfolio.container div.portfolioLogo {
+  text-align: center;
+  margin: 1em;
+  font-size: 1.8em;
+
+}
+
+section#portfolio.container div a{
+  color: #fff;
+  line-height: 1em;
+}
+section#portfolio.container div p:hover{
+  transform: scale(1.10);
+  transition-duration: 0.5s;
+}
+section#portfolio.container div .portfolioLogo img{
+  display: block;
+  width: 100px;
+  max-width: 60%;
+  margin: 1em auto;
+  background: none;
+  line-height: 1em;
+  
+}
+section#portfolio.container div img:hover {
+  transform: scale(1.10);
+  transition-duration: 0.5s;
+}
+.scrollBtn img {
+  width: auto;
+}   
+
+
+/*Interests*/
+
+section#interests .container{
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  margin: 1em auto ; 
+}
+.like{
+  margin: 0.5em 0.1em;
+  float: left;
+  width: 33%;
+}
+.like .example-image-link{
+width: auto;
+display: none;
+
+}
+.like a .image-link{
+  display: none;
+  height: 200px;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 5%;
+  
+}
+.like a .icon{
+  display: block;
+  height: 175px;
+  max-width: 100%;
+  margin: 0.5em auto;
+  
+}    
+ 
+.image-link .icon:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+
+}  
+
+iframe{
+  width: 30%;
+  max-width: 100%;
+  float: left;
+  margin: 0.5em 1em;
+  border-radius: 5%;
+}
+
+
+/*Contact*/
+section#contact{
+  text-align: center;
+  overflow: hidden;
+  line-height: 4em;
+  margin-bottom: 5em;
+  height: 85vh;   
+}
+section#contact.container p{
+  font-size: 1.5em;
+
+}
+
+::placeholder{ 
+  color: #ffffff; 
+  text-align: justify;
+  vertical-align: top;
+}
+input#mensagem{
+  margin-top: 7px; 
+  height: 150px; 
+  width: 60%; 
+  font-size: 1em; 
+  background: rgba(227, 233, 233, 0.3); 
+  overflow: hidden; 
+  color: azure;
+  text-align: start;
+  border-radius: 1em;
+}
+input#nome, #contactEmail, #assunto{
+  height: 40px; 
+  width: 60%; 
+  font-size: 1em; 
+  overflow: hidden; 
+  color: azure; 
+  background: rgba(227, 233, 233, 0.3);
+  border-radius: 1em;
+}
+
+input#submit{
+  height: 40px;
+  width: 15%;
+  border-radius: 1em; 
+
+  font-size: 1em; 
+  overflow: hidden; 
+  color: azure; 
+  background: rgba(227, 233, 233, 0.3);
+}
+
+input#submit:hover{
+  transform: scale(0.95);
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+section#contact.container a{
+  margin: 5em 0.1em;
+  float: left;
+  width: 33%;  
+  color: #ffffff;
+}
+
+section#contact.container a img{
+  display: block;
+  height: 200px;
+  max-width: 100%;
+  margin: 3em auto;
+}
+section#contact.container a img:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  
+}
